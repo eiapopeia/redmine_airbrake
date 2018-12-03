@@ -87,7 +87,7 @@ module RedmineAirbrake
       end
 
       def cleanup_path(path)
-        path.sub(/\A\[[A-Z]+_ROOT\]\//, '')
+        path.sub(/\A(?:\[|\/)[A-Z]+_ROOT]?\//, '')
       end
 
       # issue subject
